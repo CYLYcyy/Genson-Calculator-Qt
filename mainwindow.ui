@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>945</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>850</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>681</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="comboBox">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>角色</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>刻晴</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>可莉</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>武器</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>匣里龙吟</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>天空</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>风鹰剑</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>圣遗物搭配</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>如雷2+角斗2</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>主属性</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>雷伤/暴击</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>雷伤/暴击伤害</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_5">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>重击比例</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>30</y>
+      <width>99</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>计算副属性</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>945</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>副属性调整</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>comboBox_4</tabstop>
+  <tabstop>tableView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_role_selected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>125</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_calculate_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>796</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>874</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_2</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_select_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>273</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_3</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_select_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>408</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>417</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_4</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_select_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>482</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>480</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_5</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_select_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>630</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_calculate_clicked()</slot>
+  <slot>on_role_selected()</slot>
+  <slot>on_compare_clicked()</slot>
+  <slot>on_select_changed()</slot>
+ </slots>
+</ui>
