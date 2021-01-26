@@ -39,6 +39,8 @@ public:
     double CriRate;//暴击率(双冰,岩主大招,食物)
     double CriDamage;//暴击伤害
 
+    double Atkspd = 0;//攻速加成
+
     int nabp = 0;//攻击百分比条数
     int naba = 0;//攻击数值条数
     int ncr = 0;//暴击率条数

@@ -20,15 +20,17 @@ void KeQing::WP(int i)
 {
 	switch (i)
 	{
-    case 0:
-        break;
-    case 1://匣里龙吟
-
+	case 1://匣里龙吟
+		Atk += 510;
+		AtkBonusPer += 41.3;
+		Inc += 20;
 		break;
-    case 2://天空
-
+	case 2://天空
+		Atk += 608;
+		CriRate += 4;
+		Atkspd += 10;
 		break;
-    case 3://风鹰剑
+	case 3://风鹰剑
 		Atk += 674;
 		AtkBonusPer += 20;
 		break;
@@ -42,11 +44,11 @@ void KeQing::R(int i)
 {
 	switch (i)
 	{
-    case 1://如雷2+角斗2
+	case 1://如雷2+角斗2
 		Inc += 15;
 		AtkBonusPer += 18;
 		break;
-    case 2://平雷
+	case 2://平雷
 		Inc += 35;
 		break;
 	default:
@@ -61,30 +63,35 @@ void KeQing::RM(int i)
 	AtkBonusPer += 46.6;//沙
 	switch (i)
 	{
-    case 1://雷/暴
+	case 1://雷/暴
 		Inc += 46.6;
 		CriRate += 31.1;
         Maxncr = 24;
 		break;
-    case 2://雷/暴伤
+	case 2://雷/暴伤
 		Inc += 46.6;
 		CriDamage += 62.2;
         Maxncd = 24;
 		break;
-    case 3://攻/暴
+	case 3://攻/暴
 		AtkBonusPer += 46.6;
 		CriRate += 31.1;
         Maxncr = 24;
-        break;
-    case 4://攻/爆伤
+		break;
+	case 4://攻/爆伤
 		AtkBonusPer += 46.6;
 		CriDamage += 62.2;
         Maxncd = 24;
-        break;
+		break;
 	default:
 		break;
 	}
 	rm = i;
+}
+
+double KeQing::ExpD() const
+{
+	return Role::ExpD()*(1+Atkspd/100);
 }
 
 void KeQing::Resolve(int n)
