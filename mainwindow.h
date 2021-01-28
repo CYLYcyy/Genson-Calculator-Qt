@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include "Role.h"
 #include "KeQing.h"
+#include "KeLi.h"
 #include "ui_mainwindow.h"
 
 QT_BEGIN_NAMESPACE

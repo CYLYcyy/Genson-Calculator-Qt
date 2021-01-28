@@ -17,6 +17,12 @@ public:
 
     //总面板攻击
     virtual double allAtk() const;
+    //暴击收益
+    virtual double CR() const;
+    //增伤收益
+    virtual double DB() const;
+    //精通收益(剧变反应需再乘以2.4)
+    virtual double SP() const;
     //伤害期望
     virtual double ExpD() const;
 
@@ -39,6 +45,7 @@ public:
     double CriRate;//暴击率(双冰,岩主大招,食物)
     double CriDamage;//暴击伤害
 
+    double Mystery = 0;//元素精通
     double Atkspd = 0;//攻速加成
 
     int nabp = 0;//攻击百分比条数

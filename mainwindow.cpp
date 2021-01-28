@@ -32,7 +32,7 @@ void MainWindow::newRoleToPointer(Role *&pointer)
         pointer=new KeQing;
         break;
     case 2:
-        pointer=new Role;
+        pointer=new KeLi;
         break;
     default:
         break;
@@ -85,7 +85,11 @@ void MainWindow::on_role_selected()
         break;
     case 1:
         mWList<<QStringLiteral("武器")
-             <<QStringLiteral("流浪乐章");
+              <<QStringLiteral("四风原典")
+              <<QStringLiteral("天空之卷")
+              <<QStringLiteral("流浪乐章")
+              <<QStringLiteral("流浪乐章")
+              <<QStringLiteral("流浪乐章");
 
         mRList<<QStringLiteral("圣遗物")
               <<QStringLiteral("魔女4")
